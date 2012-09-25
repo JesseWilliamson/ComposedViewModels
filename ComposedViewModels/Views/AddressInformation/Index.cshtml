@@ -1,0 +1,30 @@
+﻿@model ComposedViewModels.ViewModels.AddressInformationViewModel
+@{
+    ViewBag.Title = Model.PageTitle;
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "Home"))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>@Model.PageTitle<br />
+            <small>This page has no idea about these fields</small></legend>
+        @Html.EditorFor(model => model.Fields)
+        <p>
+            <button type="submit" class="btn btn-success pull-right">
+                Adios!</button>
+        </p>
+    </fieldset>
+}
+@section Aside {
+    <h1>
+        So...</h1>
+    <p>
+        Not much else to see here, really.
+    </p>
+    <p>
+        Model binding works with the help of a custom model binder and custom editor templates.
+        The tricky bit is mapping your view model back to something else. Still working
+        on clean way to do that.
+    </p>
+}

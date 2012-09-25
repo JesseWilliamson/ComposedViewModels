@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero-unit">
+<h1>Hi-ya!</h1>
+<p>
+    I'm going to demo a way to create view models at runtime. The idea is that the each View Model contains a collection of page fields, but they don't get populated until runtime.       
+</p>
+<p>
+    @Html.ActionLink("Let's Go!", "Index", "PersonalInformation",null, new { @class = "btn btn-success" })    
+</p>
+</div>

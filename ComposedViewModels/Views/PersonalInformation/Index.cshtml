@@ -1,0 +1,26 @@
+﻿@model ComposedViewModels.ViewModels.PersonalInformationViewModel
+@{
+    ViewBag.Title = Model.PageTitle;
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+        @using (Html.BeginForm("Save", "PersonalInformation", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend>@Model.PageTitle<br />
+                    <small>I might ask for your Date of Birth, or I might not.</small></legend>
+                @Html.EditorFor(x => x.Fields)
+                <p>
+            <button type="submit" class="btn btn-success pull-right">Keep on keepin' on </button>
+        </p>
+            </fieldset>
+        }    
+    @section Aside {
+        <h1>Big Deal?</h1>
+        <p>
+            This is pretty simple but it illustrates the point pretty well. This page has no idea what fields it's going to show, yet everything is still strongly typed</p>
+        <p>
+            For the most part, the fields just look for the page they apply to, but it can be made as complex as you like. For example, Birthday only shows up if the minute of the current time is even.
+        </p>
+        }
