@@ -15,9 +15,9 @@ namespace ComposedViewModels.ViewModels.Fields
             return pageName == PageName.AddressInformation;
         }
 
-        public int FieldOrder
+        public int FieldOrder()
         {
-            get { return 0; }
+            return 0;
         }
 
         [Required(ErrorMessage = "This field is required.")]

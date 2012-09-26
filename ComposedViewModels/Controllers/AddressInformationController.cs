@@ -20,7 +20,7 @@ namespace ComposedViewModels.Controllers
             
             var fields = Fields
                             .Where(field => field.AppliesToPage(PageName.AddressInformation))
-                            .OrderBy(field => field.FieldOrder);
+                            .OrderBy(field => field.FieldOrder());
 
             var model = new AddressInformationViewModel {Fields = fields};
 

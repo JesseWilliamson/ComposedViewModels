@@ -26,7 +26,8 @@ namespace ComposedViewModels.Controllers
         {
             var fields = Fields
                 .Where(field => field.AppliesToPage(PageName.PersonalInformation))
-                .OrderBy(field => field.FieldOrder);
+                .OrderBy(field => field.FieldOrder())
+                .ToList();
             var model = new PersonalInformationViewModel {Fields = fields};
             return View(model);
         }

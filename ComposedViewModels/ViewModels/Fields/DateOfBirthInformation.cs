@@ -12,9 +12,9 @@ namespace ComposedViewModels.ViewModels.Fields
             return pageName == PageName.PersonalInformation && DateTime.Now.Minute%2 == 0;
         }
 
-        public int FieldOrder
+        public int FieldOrder()
         {
-            get {return 1; }
+            return 1;
         }
 
         [DisplayName("Birthday")]

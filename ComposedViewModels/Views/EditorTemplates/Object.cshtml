@@ -1,0 +1,9 @@
+﻿@Html.Hidden("ModelType", ViewData.ModelMetadata.ModelType)
+@foreach (var prop in ViewData.ModelMetadata.Properties)
+{        
+    <p>               
+        @Html.Label(prop.PropertyName)        
+        @Html.Editor(prop.PropertyName)
+        @Html.ValidationMessage(prop.PropertyName)        
+    </p>
+}

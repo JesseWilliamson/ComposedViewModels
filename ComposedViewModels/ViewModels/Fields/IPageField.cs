@@ -10,6 +10,6 @@ namespace ComposedViewModels.ViewModels.Fields
     public interface IPageField
     {
         bool AppliesToPage(PageName pageName);
-        int FieldOrder { get; }        
+        int FieldOrder();
     }
 }

@@ -14,9 +14,9 @@ namespace ComposedViewModels.ViewModels.Fields
             return pageName == PageName.PersonalInformation;
         }
 
-        public int FieldOrder
+        public int FieldOrder()
         {
-            get { return 0; }
+            return 0;
         }
         
 
