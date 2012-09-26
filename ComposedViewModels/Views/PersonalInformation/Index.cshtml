@@ -10,7 +10,7 @@
             <fieldset>
                 <legend>@Model.PageTitle<br />
                     <small>I might ask for your Date of Birth, or I might not.</small></legend>
-                @Html.EditorFor(x => x.Fields)
+                @Html.EditorFor(model => model.Fields)
                 <p>
             <button type="submit" class="btn btn-success pull-right">Keep on keepin' on </button>
         </p>

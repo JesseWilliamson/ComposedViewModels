@@ -15,7 +15,7 @@ namespace ComposedViewModels
                                                       "~/Views/{1}/{0}.cshtml",
                                                       "~/Views/Shared/{0}.cshtml",                                                      
                                                       "~/Views/{0}.cshtml"
-                                                  }.Union(base.PartialViewLocationFormats).ToArray<string>();
+                                                  };
         }
     }
 }
